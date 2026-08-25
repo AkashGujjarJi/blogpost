@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+    <% if (locals.postedBlogs) { %>
+      <% for (let i=0; i < postedBlogs.length; i++) { %>
+        <div class="postLinkContainer">
+        <a class="postLink" href="/post/<%= postedBlogs[i].id %>" ><%= postedBlogs[i].title %></a>
+        <p class="smallDesc"> - <%= `${postedBlogs[i].content.slice(0, 100)}...` %> </p><br>
+        </div>
+        <% } %>
+          <% } %>
+<%- include("partials/footer") %>

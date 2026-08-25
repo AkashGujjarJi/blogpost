@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+  <% const currentPost=locals.viewingPost %>
+    <div class="postTitle">
+      <h2>
+        <%= currentPost.title %>
+      </h2>
+      <div class="buttons">
+        <a href="/edit/<%= currentPost.id %>" class="btn edit" title="Edit this post.">Edit</a>
+        <a href="/delete/<%= currentPost.id %>" class="btn delete" title="Delete this post.">Delete</a>
+      </div>
+    </div>
+    <p class="postContent">
+      <%= currentPost.content %>
+    </p>
+
+    <%- include("partials/footer") %>

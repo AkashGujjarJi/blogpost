@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+
+<% const currentPost = locals.editPost; %>
+
+<form action="/edit/editedBlog/<%= currentPost.id %>" method="POST" class="blog-form">
+  <input type="text" value="<%= currentPost.title %>" name="title" class="blog-input" required>
+  <br>
+  <textarea name="content" class="blog-textarea" required><%= currentPost.content %></textarea>
+  <br>
+  <input type="submit" value="Save Edit" class="blog-btn btn-edit">
+</form>
+
+<%- include("partials/footer") %>

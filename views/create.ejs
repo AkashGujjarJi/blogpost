@@ -1,0 +1,11 @@
+<%- include("partials/header") %>
+
+<form action="postblog" method="POST" class="blog-form">
+  <input type="text" placeholder="Blog Title" name="title" class="blog-input" required>
+  <br>
+  <textarea name="content" placeholder="Describe your post" class="blog-textarea" required></textarea>
+  <br>
+  <input type="submit" value="Publish" class="blog-btn btn-publish">
+</form>
+
+<%- include("partials/footer") %>
